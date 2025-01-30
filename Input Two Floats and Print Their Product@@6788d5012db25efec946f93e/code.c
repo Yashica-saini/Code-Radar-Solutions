@@ -4,8 +4,7 @@ int main()
 {
     int a;
     int b;
-    int product=a*b;
     scanf("%d %d",&a,&b);
-    printf("Product: %d",product);
+    printf("Product: %d",a*b);
     return 0;
 }
