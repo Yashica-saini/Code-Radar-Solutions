@@ -2,9 +2,8 @@
 
 int main()
 {
-    int a;
-    int b;
-    scanf("%d %d",&a,&b);
+    int a,b;
+    scanf("%d%d",&a ,&b);
     printf("Product: %d",a*b);
     return 0;
 }
