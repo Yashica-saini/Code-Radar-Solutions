@@ -2,12 +2,7 @@
 int main() {
     int a,b;
     scanf("%d %d",&a,&b);
-    int c=(a>>b)&1;
-    if (c==0){
-        printf("1");
-    }
-    else{
-        printf("0");
-    }
+    int c=a^(a>>b)&1;
+    printf("%d",c);
     return 0;
 }
