@@ -13,7 +13,7 @@ int main() {
         printf("%d",c);
     }
     else{
-        printf("Not a number");
+        printf("Not an integer");
     }
     return 0;
 }
