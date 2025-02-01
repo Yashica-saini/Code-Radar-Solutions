@@ -12,5 +12,8 @@ int main() {
     else if(c>a && c>b){
         printf("%d",c);
     }
+    else{
+        printf("Not a number")
+    }
     return 0;
 }
