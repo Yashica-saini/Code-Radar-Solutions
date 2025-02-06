@@ -8,7 +8,16 @@ int main() {
         case '+':printf("%d",a+b);break;
         case '-':printf("%d",a-b);break;
         case '*':printf("%d",a*b);break;
-        case '/':printf("%d",a/b);break;
+        case '/':
+        if(b==0){
+            printf("error");
+        else{
+            printf("%d",a/b);
+        }
+        default{
+            printf("error")
+        }
+        }
     }
     return 0;
 }
