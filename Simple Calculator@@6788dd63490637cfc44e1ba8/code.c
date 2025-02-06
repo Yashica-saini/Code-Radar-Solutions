@@ -14,9 +14,9 @@ int main() {
         else{
             printf("%d",a/b);
         }
-        default{
+        default:
             printf("error")
-        }
+        
         }
     }
     return 0;
