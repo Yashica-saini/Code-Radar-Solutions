@@ -1,3 +1,4 @@
+#include <stdio.h>
 int main()
 {
     int a,count=0;
