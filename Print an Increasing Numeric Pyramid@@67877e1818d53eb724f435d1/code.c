@@ -4,9 +4,14 @@ int a;
 scanf("%d",&a);
 for(int i=1;i<=a;i++){
     for (int j=1; j<=a-i;j++){
-        printf("%d",i);
+        printf(" ");
     }
     printf("\n");
+    for(k=1;k<=i){
+        if (k<i){
+            printf("%d",k)
+        }
+    }
     
 }
 return 0;
