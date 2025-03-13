@@ -6,9 +6,8 @@ int main()
     for (int i=a;i>=1;i--){
         int b=1;
         for(int j=1;j<=i;j++){
-            int d=b+64;
-            char ch=(char)d;
-            printf("%c ",ch);
+            char d=b+64;
+            printf("%c ",d);
             b++;
         }
         printf("\n");
