@@ -9,6 +9,14 @@ int main(){
         for(int k=1; k<=(2*i-1);k++){
             printf("*");
         }
+        for(i=a-1;i>=1;i--){
+            for(j=1;j<=a-i;j++){
+                printf(" ");
+            }
+            for(k=1;k<=(2*i-1);k++){
+                printf("*");
+            }
+        }
     
         printf("\n");
     }
