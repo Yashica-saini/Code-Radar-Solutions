@@ -6,8 +6,9 @@ int main(){
     strcpy(rev,str);
     int len=strlen(str);
     int j=0;
-    for(int i=len-1;i>=0;i--;j++){
+    for(int i=len-1;i>=0;i--){
         rev[j]=str[i];
+        j++;
         rev[len]='\0';
     }
     if(strcmp(str,rev)==0){
