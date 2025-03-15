@@ -5,7 +5,8 @@ int main(){
     scanf("%s",str);
     strcpy(rev,str);
     int len=strlen(str);
-    for(int i=len-1;int j=0;i>=0;i--;j++){
+    int j=0;
+    for(int i=len-1; j=0;i>=0;i--;j++){
         rev[j]=str[i];
         rev[len]='\0';
     }
