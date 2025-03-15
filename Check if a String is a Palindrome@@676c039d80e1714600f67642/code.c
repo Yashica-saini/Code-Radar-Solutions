@@ -6,7 +6,7 @@ int main(){
     char temp=str;
     int len=strlen(str);
     for(int i=len-1;i>=0;i--){
-            r=str[i]
+          char  r=str[i];
     }
     if(temp==r){
         printf("Yes");
