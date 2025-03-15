@@ -1,15 +1,13 @@
 #include <stdio.h>
-#include <string.h>
+#include<string.h>
 int main(){
-    char str[100];
-    scanf("%s",str);
-    char temp=str;
-    char r;
-    int len=strlen(str);
+    char str[100],rev[100];
+    strcpy(str,rev);
+    len=strlen(len);
     for(int i=len-1;i>=0;i--){
-          char  r=str[i];
+        rev=str[i];
     }
-    if(temp==r){
+    if(strcmp(str,rev)==0){
         printf("Yes");
     }
     else{
