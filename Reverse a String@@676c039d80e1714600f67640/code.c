@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 int main(){
-    char str[100];
+    char str;
     scanf("%c",&str);
-    if(c!="\n"){
+    if(str!="\n"){
         main();
         printf("%c",str);
     }
