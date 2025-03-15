@@ -5,9 +5,7 @@ int main(){
     scanf("%s",str);
     int len=strlen(str);
     for(int i=len-1;i>=0;i--){
-        if(str!='\n'){
             printf("%c",str[i]);
-        }
     }
     return 0;
 }
