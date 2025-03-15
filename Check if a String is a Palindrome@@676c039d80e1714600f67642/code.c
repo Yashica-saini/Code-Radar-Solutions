@@ -4,7 +4,7 @@ int main(){
     char str[100],rev[100];
     scanf("%s",str);
     strcpy(rev,str);
-    int len=strlen(len);
+    int len=strlen(str);
     for(int i=len-1;i>=0;i--){
         rev=str[i];
     }
