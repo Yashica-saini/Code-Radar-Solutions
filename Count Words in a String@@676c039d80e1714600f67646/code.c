@@ -5,8 +5,8 @@ int main(){
     scanf("%s",str);
     int len=strlen(str);
     int count=0;
-    for(int i=0;i<=len;i++){
-        if(str[i]=' '){
+    for(int i=0;i<len;i++){
+        if(str[i]==' '){
             count+=1;
         }
     }
