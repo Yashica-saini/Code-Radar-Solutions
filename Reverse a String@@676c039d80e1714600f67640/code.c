@@ -3,7 +3,7 @@
 int main(){
     char str;
     scanf("%c",&str);
-    if(str!="\n"){
+    if(str!='\n'){
         main();
         printf("%c",str);
     }
