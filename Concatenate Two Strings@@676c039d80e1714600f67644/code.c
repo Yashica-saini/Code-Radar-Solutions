@@ -3,7 +3,7 @@
 int main(){
     char str1;
     char str2;
-    scanf("%[^\n]\n",str1);
+    scanf("%[^\n]",str1);
     scanf("%[^\n]",str2);
     strcat(str1," ");
     strcat(str1,str2);
