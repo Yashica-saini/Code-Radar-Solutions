@@ -7,16 +7,12 @@ int main(){
     int len =strlen(str);
     for(int i=0;i<len;i++){
         if(str[i]=='0'||str[i]==1){
-            x='m';
+            printf("Yes\n");
+            return 0;
         }
         else{
-            x='n';
+            printf("No\n");
+            return 0;
         }
-    }
-    if(x=='m'){
-        printf("Yes\n");
-    }
-    else{
-        printf("No\n");
     }
 }
