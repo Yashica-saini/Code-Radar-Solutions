@@ -8,9 +8,10 @@ int main(){
             printf("No\n");
             return 0;
         }
-        else{
+        
+    }
+    else{
             printf("Yes\n");
             return 0;
         }
-    }
 }
