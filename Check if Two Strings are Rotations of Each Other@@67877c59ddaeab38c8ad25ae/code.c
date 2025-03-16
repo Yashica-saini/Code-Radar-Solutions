@@ -3,7 +3,7 @@
 int main(){
     char str[100],rev[100],str2[100];
     scanf("%s",str);
-    getchar();
+   
     scanf("%s",str2);
     int len=strlen(str);
     int j=0;
