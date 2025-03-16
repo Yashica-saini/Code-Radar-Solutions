@@ -4,16 +4,13 @@ int main(){
     char str[100];
     scanf("%[^\n]",str);
     char str2[100];
-    
     int len=strlen(str);
-    for(int i=0;i<len;i++)
-    if(str[i]==' '){
-        str2=str[i+1];
+    int j=0;
+    for(int i=0;i<len;i++){
+        if(str[i]==' ')continue;
+        str2[j]=str[i];
+        j++;
     }
-    else{
-        str2=str[i];
-    }
-    str2[len]='\0';
     printf("%s",str2);
     return 0;
 }
