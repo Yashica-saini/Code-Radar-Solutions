@@ -6,7 +6,7 @@ int main(){
     int freq[256]={0};
     int max=0;
     char maxchar='\0';
-    for(int i=0;str!=0;i++){
+    for(int i=0;str[i]!=0;i++){
         freq[(int)str[i]]++;
         if(freq[(int)str[i]]>max){
             max=freq[(int)str[i]];
