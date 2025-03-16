@@ -12,7 +12,7 @@ int main(){
         j++;
     }
     rev[len]='\0';
-    if(strcmp(rev,str)==0){
+    if(strcmp(rev,str2)==0){
         printf("Yes\n");
     }
     else{
