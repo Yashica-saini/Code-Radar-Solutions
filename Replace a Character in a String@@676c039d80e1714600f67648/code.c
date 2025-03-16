@@ -3,8 +3,10 @@
 int main(){
     char str[100];
     scanf("%s",str);
+    getchar();
     char n,a;
     scanf("%c",&n);
+    getchar();
     scanf(" %c",&a);
     int len=strlen(str);
     for(int i=0;i<len;i++){
