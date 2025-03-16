@@ -6,7 +6,7 @@ int main(){
     scanf("%s",str);
     int len=strlen(str);
     for(int i=0;i<=len;i++){
-        str=toupper(str[i]);
+        str[i]=toupper(str[i]);
     }
     printf("%s",str);
     return 0;
