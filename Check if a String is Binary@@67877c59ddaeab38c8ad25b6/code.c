@@ -10,8 +10,6 @@ int main(){
         }
         
     }
-    else{
             printf("Yes\n");
             return 0;
-        }
 }
