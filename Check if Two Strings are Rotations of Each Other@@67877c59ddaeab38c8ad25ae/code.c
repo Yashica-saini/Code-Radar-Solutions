@@ -10,8 +10,8 @@ int main(){
     for(int i=len;i>=0;i--){
         rev[j]=str[i];
         j++;
-        rev[len]='\0';
     }
+    rev[len]='\0';
     if(rev==str2){
         printf("Yes\n");
     }
