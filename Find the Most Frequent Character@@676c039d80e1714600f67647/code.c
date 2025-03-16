@@ -7,6 +7,9 @@ int main(){
     int max=0;
     char maxchar='\0';
     for(int i=0;str[i]!=0;i++){
+        if(freq[(int)str[i]==' '])
+            continue;
+        
         freq[(int)str[i]]++;
         if(freq[(int)str[i]]>max){
             max=freq[(int)str[i]];
