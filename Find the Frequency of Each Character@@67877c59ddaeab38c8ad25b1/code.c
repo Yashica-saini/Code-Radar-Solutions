@@ -10,7 +10,7 @@ int main(){
         freq[(int)str[i]]++;
     }
     for(int i=0;i<256;i++){
-        if (freq[i]>0){
+        if (freq[(int)str[i]]>0){
             printf("%c: %d\n",str[i],freq[i]);
             freq[(int)str[i]] = 0;
         }
