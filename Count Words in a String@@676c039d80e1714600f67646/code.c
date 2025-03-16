@@ -11,11 +11,11 @@ int main(){
             if(inword==0){
                 count++;
                 inword=1;
-            }
+            }}
             else{
                 inword=0;
             }
-        }
+        
     }
     printf("%d",count);
 }
