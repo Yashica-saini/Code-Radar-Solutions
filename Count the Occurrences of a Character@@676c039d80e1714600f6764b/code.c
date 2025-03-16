@@ -9,7 +9,7 @@ int main(){
     int count=0;
     for(int i=0;i<len;i++){
         if(str[i]==n){
-            count+=1;
+            count++;
         }
     }
     printf("%d",count);
