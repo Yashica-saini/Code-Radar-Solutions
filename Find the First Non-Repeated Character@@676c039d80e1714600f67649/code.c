@@ -10,6 +10,9 @@ int main(){
         if(str[i]!=a){
         str[i]=a;
         }
+        else{
+            str[1]=a;
+        }
     }
     printf("%s",a);
     return 0;
