@@ -7,7 +7,7 @@ int main(){
     char max='\0';
     for(int i=0;str!=0;i++){
         freq[(int)str[i]]++;
-        if(freq(int)str[i]>max){
+        if(freq[(int)str[i]]>max){
             max=str[i];
         }
     }
