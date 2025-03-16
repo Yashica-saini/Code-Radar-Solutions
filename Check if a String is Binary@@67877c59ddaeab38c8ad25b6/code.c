@@ -6,7 +6,7 @@ int main(){
     char x;
     int len =strlen(str);
     for(int i=0;i<len;i++){
-        if(str[i]=='0'||str[i]==1){
+        if(str[i]=='0'||str[i]=='1'){
             printf("Yes\n");
             return 0;
         }
