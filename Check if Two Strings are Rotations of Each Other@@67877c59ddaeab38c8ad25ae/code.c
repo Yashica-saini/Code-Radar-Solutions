@@ -7,7 +7,7 @@ int main(){
     scanf("%s",str2);
     int len=strlen(str);
     int j=0;
-    for(int i=len;i>=0;i--){
+    for(int i=len-1;i>=0;i--){
         rev[j]=str[i];
         j++;
     }
