@@ -7,7 +7,7 @@ int main(){
     int count=0;
     int inword=0;
     for(int i=0;i<len;i++){
-        if(str[i]==' '){
+        if(str[i]!=' '){
             if(inword==0){
                 count++;
                 inword=1;
