@@ -4,7 +4,7 @@ int main(){
     char str[100];
     scanf("%[^\n]",str);
     int len=strlen(str);
-    for(int i=0;i>=len;i++){
+    for(int i=0;str[i]!='\0';i++){
         if (islower(str[i])){
             str[i]=toupper(str[i]);
         }
