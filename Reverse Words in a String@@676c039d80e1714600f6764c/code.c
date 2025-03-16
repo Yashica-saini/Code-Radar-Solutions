@@ -3,6 +3,7 @@
 int main(){
     char str[100],rev[100];
     scanf("%[^\n]",str);
+    rev[j]='\0';
     int len=strlen(str);
     int j=0;
     for(int i=len-1;i>=0;i--){
