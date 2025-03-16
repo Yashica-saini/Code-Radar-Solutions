@@ -11,6 +11,6 @@ int main(){
         str[i]=a;
         }
     }
-    printf("%c",a);
+    printf("%s",a);
     return 0;
 }
