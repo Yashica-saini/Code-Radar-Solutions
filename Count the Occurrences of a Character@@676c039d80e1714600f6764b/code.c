@@ -6,9 +6,10 @@ int main(){
     char n;
     scanf("%c",&n);
     int len=strlen(str);
+    int count=0;
     for(int i=0;i<len;i++){
         if(str[i]==n){
-            int count+=1;
+            count+=1;
         }
     }
     printf("%d",count);
