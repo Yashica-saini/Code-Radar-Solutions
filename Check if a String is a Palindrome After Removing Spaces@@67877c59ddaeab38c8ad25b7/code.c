@@ -11,6 +11,7 @@ int main(){
         rev[j]=str[i];
         j++;
     }
+    rev[j]='0\'
     if(strcmp(str,rev)==0){
         printf("Yes\n");
     }
