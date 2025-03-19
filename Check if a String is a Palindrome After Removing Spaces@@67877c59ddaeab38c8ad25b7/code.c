@@ -7,7 +7,7 @@ int main(){
     char rev[100];
     char cleanstr;
     int m=0;
-    for(int i=0,i<len;i++){
+    for(int i=0;i<len;i++){
         if(str[i]!=' '){
             cleanstr[m]=str[i];
             m++;
