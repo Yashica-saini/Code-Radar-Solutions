@@ -4,7 +4,7 @@ int main(){
     char str[100];
     scanf("%[^\n]",str);
     int len=strlen(str);
-    char rev[50];
+    char rev[100];
     int j=0;
     for(int i=len-1;i>=0;i--){
         if(str[i]==' ')continue;
@@ -12,10 +12,12 @@ int main(){
         j++;
     }
     rev[j]='\0';
+    if(str=' ')continue;{
     if(strcmp(str,rev)==0){
         printf("Yes\n");
     }
     else{
         printf("No");
+    }
     }
 }
