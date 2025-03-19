@@ -9,8 +9,8 @@ int main(){
     int m=0;
     for(int i=0;i<len;i++){
         if(str[i]!=' '){
-            cleanstr[m]=str[i];
-            m++;
+            cleanstr[j]=str[i];
+            j++;
         }
     }
     int j=0;
