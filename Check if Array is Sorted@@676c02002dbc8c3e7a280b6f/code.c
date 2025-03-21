@@ -9,14 +9,11 @@ int main(){
     int issorted;
     issorted=0;
     for(int i=0;i<n;i++){
-        if (arr[i]<arr[i+1]){
+        if (arr[i]<=arr[i+1]){
             issorted=0;
             break;
         }
-        else if(arr[i+1]==arr[i]){
-            printf("Sorted");
-            break;
-        }
+        
         else{
             issorted=1;
             break;
