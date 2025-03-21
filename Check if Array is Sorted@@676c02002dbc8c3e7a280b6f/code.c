@@ -10,6 +10,7 @@ int main(){
     issorted=0;
     if(n==1){
         printf("Sorted");
+        break;
     }
     for(int i=0;i<n;i++){
         if (arr[i]<=arr[i+1]){
