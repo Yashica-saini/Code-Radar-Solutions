@@ -7,12 +7,15 @@ int main(){
         printf("%d",arr[i]);
     }
     int max;
-    for (int i=0;i<=n;i--){
-        if(arr[i]>max){
-            max=arr[i];
+    for(int i=0;i<n;i++){
+        if (arr[i]<arr[i+1]){
+            max=0;
+        }
+        else{
+            max=1;
         }
     }
-    if(max==arr[n-1]){
+    if(max==0){
         printf("Sorted");
     }
     else{
