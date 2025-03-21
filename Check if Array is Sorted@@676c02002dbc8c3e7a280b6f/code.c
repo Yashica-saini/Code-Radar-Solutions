@@ -6,16 +6,16 @@ int main(){
     for (int i=0;i<=n;i++){
         scanf("%d",&arr[i]);
     }
-    int max;
+    int issorted;
     for(int i=0;i<n;i++){
         if (arr[i]<arr[i+1]){
-            max=0;
+            issorted=0;
         }
         else{
-            max=1;
+            issorted=1;
         }
     }
-    if(max==0){
+    if(issorted==0){
         printf("Sorted");
     }
     else{
