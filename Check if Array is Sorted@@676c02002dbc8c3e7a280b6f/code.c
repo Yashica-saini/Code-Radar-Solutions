@@ -15,6 +15,7 @@ int main(){
         }
         else if(arr[i+1]==arr[i]){
             printf("Sorted");
+            break;
         }
         else{
             issorted=1;
