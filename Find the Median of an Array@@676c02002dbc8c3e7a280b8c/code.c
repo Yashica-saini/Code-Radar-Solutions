@@ -23,7 +23,7 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    printf("%f\n", findMedian(arr, n));
+    printf("%d\n", findMedian(arr, n));
 
     return 0;
 }
