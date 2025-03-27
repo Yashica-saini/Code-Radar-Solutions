@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void insertionSortChars(char arr[], int n) {
+void insertionSort(char arr[], int n) {
     for (int i = 1; i < n; i++) {
         char key = arr[i];
         int j = i - 1;
