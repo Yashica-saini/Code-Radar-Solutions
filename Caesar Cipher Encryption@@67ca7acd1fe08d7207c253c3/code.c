@@ -1,33 +1,23 @@
 #include <stdio.h>
 
-// Function to encrypt the given text using Caesar Cipher
-void caesarCipherEncrypt(char text[], int shift) {
-    for (int i = 0; text[i] != '\0'; i++) {
-        char ch = text[i];
+// Function to encrypt the message using Caesar Cipher
+void caesarCipher(char message[], int shift, char encrypted[]) {
+    for (int i = 0; message[i] != '\0'; i++) {
+        char ch = message[i];
 
         // Encrypt uppercase letters
         if (ch >= 'A' && ch <= 'Z') {
-            text[i] = ((ch - 'A' + shift) % 26) + 'A';
+            encrypted[i] = ((ch - 'A' + shift) % 26) + 'A';
         }
         // Encrypt lowercase letters
         else if (ch >= 'a' && ch <= 'z') {
-            text[i] = ((ch - 'a' + shift) % 26) + 'a';
+            encrypted[i] = ((ch - 'a' + shift) % 26) + 'a';
+        }
+        // Keep other characters unchanged
+        else {
+            encrypted[i] = ch;
         }
     }
+    encrypted[i] = '\0'; // Null terminate the string
 }
 
-// Function to decrypt the given text using Caesar Cipher
-void caesarCipherDecrypt(char text[], int shift) {
-    for (int i = 0; text[i] != '\0'; i++) {
-        char ch = text[i];
-
-        // Decrypt uppercase letters
-        if (ch >= 'A' && ch <= 'Z') {
-            text[i] = ((ch - 'A' - shift + 26) % 26) + 'A';
-        }
-        // Decrypt lowercase letters
-        else if (ch >= 'a' && ch <= 'z') {
-            text[i] = ((ch - 'a' - shift + 26) % 26) + 'a';
-        }
-    }
-}
