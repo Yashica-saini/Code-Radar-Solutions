@@ -1,22 +1,24 @@
-void selectionSort(int arr[], int n) {
+#include <stdio.h>
+
+void selectionSort(int arr[10], int n) {
     for (int i = 0; i < n - 1; i++) {
-        int minIndex = i;  // Assume the first element is the smallest
+        int minIndex = i;  // Assume the current index is the minimum
         for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[minIndex]) {
-                minIndex = j;  // Update index of the minimum element
+            if (arr[j] < arr[minIndex]) {  // Find the minimum element
+                minIndex = j;
             }
         }
-        // Swap only if needed
-        if (minIndex != i) {
-            int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
-        }
+        // Swap the found minimum element with the first unsorted element
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
     }
 }
-void printArray(int arr[], int n) {
-    for (int i = n - 1; i >= 0; i--) {  // Corrected loop to prevent out-of-bounds access
+
+void printArray(int arr[10], int n) {
+    for (int i = 0; i < n; i++) {  // Print in ascending order
         printf("%d ", arr[i]);
     }
-    printf("\n");  // Newline for proper formatting
+    printf("\n");  // New line for better formatting
 }
+
