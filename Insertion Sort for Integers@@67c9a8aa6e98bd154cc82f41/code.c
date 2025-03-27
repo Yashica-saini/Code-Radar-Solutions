@@ -15,11 +15,10 @@ void insertionSort(int arr[], int n) {
     }
 }
 
-// Function to print array in reverse order
+// Function to print array in correct order
 void printArray(int arr[], int n) {
-    for (int i = n - 1; i >= 0; i--) {  // Print in reverse order
+    for (int i = 0; i < n; i++) {  // Print in normal order
         printf("%d ", arr[i]);
     }
     printf("\n");  
-}
 
