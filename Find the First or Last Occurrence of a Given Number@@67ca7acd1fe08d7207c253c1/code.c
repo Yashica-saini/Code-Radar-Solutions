@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Function to find first or last occurrence of target
+
 int findOccurrence(int arr[], int n, int target, char mode) {
     int left = 0, right = n - 1, result = -1;
 
@@ -8,11 +8,11 @@ int findOccurrence(int arr[], int n, int target, char mode) {
         int mid = left + (right - left) / 2;
 
         if (arr[mid] == target) {
-            result = mid;  // Store index
+            result = mid; 
             if (mode == 'F') {
-                right = mid - 1;  // Move left for first occurrence
+                right = mid - 1; 
             } else {
-                left = mid + 1;   // Move right for last occurrence
+                left = mid + 1;   
             }
         } else if (arr[mid] < target) {
             left = mid + 1;
