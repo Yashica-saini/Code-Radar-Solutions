@@ -2,7 +2,8 @@
 
 // Function to encrypt the message using Caesar Cipher
 void caesarCipher(char message[], int shift, char encrypted[]) {
-    for (int i = 0; message[i] != '\0'; i++) {
+    int i;  // Declare i before using it
+    for (i = 0; message[i] != '\0'; i++) {
         char ch = message[i];
 
         // Encrypt uppercase letters
@@ -20,4 +21,3 @@ void caesarCipher(char message[], int shift, char encrypted[]) {
     }
     encrypted[i] = '\0'; // Null terminate the string
 }
-
