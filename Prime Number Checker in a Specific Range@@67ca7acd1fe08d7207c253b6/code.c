@@ -18,5 +18,8 @@ void printPrimesInRange(int start, int end) {
         if (isPrime(i))
             printf("%d ", i);
     }
+    else{
+        printf("No prime numbers")
+    }
     printf("\n");
 }
