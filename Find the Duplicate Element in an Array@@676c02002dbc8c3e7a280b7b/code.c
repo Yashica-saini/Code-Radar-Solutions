@@ -1,15 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>  // Include this for abs()
-
+#include <stdlib.h>  
 int findDuplicate(int arr[], int n) {
     for (int i = 0; i < n; i++) {
-        int index = abs(arr[i]); // Use abs() correctly
+        int index = abs(arr[i]); 
         if (arr[index] < 0) {
-            return index; // Duplicate found
+            return index; 
         }
-        arr[index] = -arr[index]; // Mark the element as visited
+        arr[index] = -arr[index]; 
     }
-    return -1; // No duplicate found
+    return -1;
 }
 
 int main() {
