@@ -46,3 +46,4 @@ int main() {
     int peak = findFirstPeak(arr, n);
 
     // Print the first peak element (
+}
