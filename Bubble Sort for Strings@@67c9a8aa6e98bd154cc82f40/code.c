@@ -1,5 +1,7 @@
+#include <stdio.h>
 #include <string.h>
-void bubbleSort(int n, char arr[n][100]) { 
+
+void bubbleSort(int n, char arr[][100]) { 
     char temp[100];
 
     for (int i = 0; i < n - 1; i++) {
@@ -11,6 +13,4 @@ void bubbleSort(int n, char arr[n][100]) {
             }
         }
     }
-    for (int i = 0; i < n; i++) {
-        printf("%s\n", arr[i]);
 }
