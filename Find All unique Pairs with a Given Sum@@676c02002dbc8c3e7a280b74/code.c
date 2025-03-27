@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int compare(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
 void findPairs(int arr[], int n, int target) {
-    qsort(arr, n, sizeof(int), (int (*)(const void *, const void *))strcmp);
+    qsort(arr, n, sizeof(int), compare);
 
     int left = 0, right = n - 1;
 
@@ -39,4 +43,5 @@ int main() {
 
     return 0;
 }
+
 
