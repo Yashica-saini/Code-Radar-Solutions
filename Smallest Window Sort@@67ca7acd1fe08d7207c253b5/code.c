@@ -1,4 +1,4 @@
-void smallestWindowSortChars(char arr[], int start, int end) {
+void findUnsortedSubarray(char arr[], int start, int end) {
     for (int i = start + 1; i <= end; i++) {
         char key = arr[i];
         int j = i - 1;
