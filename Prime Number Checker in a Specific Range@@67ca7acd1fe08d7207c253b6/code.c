@@ -15,11 +15,11 @@ bool isPrime(int num) {
 // Function to print prime numbers in a given range
 void printPrimesInRange(int start, int end) {
     for (int i = start; i <= end; i++) {
-        if (isPrime(i))
+        if (isPrime(i)){
             printf("%d ", i);
     }
     else{
         printf("No prime numbers");
     }
     printf("\n");
-}
+}}
