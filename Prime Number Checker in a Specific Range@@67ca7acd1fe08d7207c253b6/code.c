@@ -30,19 +30,3 @@ void printPrimesInRange(int start, int end) {
     printf("\n");
 }
 
-// Main function
-int main() {
-    int start, end;
-    
-    // Input range
-    printf("Enter start of range: ");
-    scanf("%d", &start);
-    printf("Enter end of range: ");
-    scanf("%d", &end);
-
-    // Print prime numbers in the range
-    printf("Prime numbers in the range [%d, %d]: ", start, end);
-    printPrimesInRange(start, end);
-
-    return 0;
-}
