@@ -29,9 +29,9 @@ int main() {
 
     // Check if the array is a palindrome and print result
     if (isPalindrome(arr, n)) {
-        printf("Palindrome\n");
+        printf("Yes\n");
     } else {
-        printf("Not a Palindrome\n");
+        printf("No\n");
     }
 
     return 0;
