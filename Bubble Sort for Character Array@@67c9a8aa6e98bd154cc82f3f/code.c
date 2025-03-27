@@ -18,6 +18,6 @@ void bubbleSort(char arr[],int n) {
         }
     }
 }
-void printArray(char arr[]) {
+void printArray(char arr[],int n) {
     printf("%s\n", arr);
 }
