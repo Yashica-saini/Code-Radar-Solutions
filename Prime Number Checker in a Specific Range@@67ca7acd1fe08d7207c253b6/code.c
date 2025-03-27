@@ -19,7 +19,7 @@ void printPrimesInRange(int start, int end) {
             printf("%d ", i);
     }
     else{
-        printf("No prime numbers")
+        printf("No prime numbers");
     }
     printf("\n");
 }
