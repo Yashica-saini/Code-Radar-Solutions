@@ -14,7 +14,7 @@ void findPairs(int arr[], int n, int target) {
         int sum = arr[left] + arr[right];
 
         if (sum == target) {
-            printf("%d %d\n", arr[left], arr[right]);
+            printf("%d %d\n", arr[right], arr[left]);
 
             while (left < right && arr[left] == arr[left + 1]) left++;
             while (left < right && arr[right] == arr[right - 1]) right--;
