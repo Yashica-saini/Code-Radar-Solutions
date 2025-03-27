@@ -2,7 +2,7 @@
 #include <string.h>
 
 // Function to perform Bubble Sort on character array
-void bubbleSort(char arr[]) {
+void bubbleSort(char arr[],int n) {
     int n = strlen(arr); // Get the length of the string
     int i, j;
     char temp;
