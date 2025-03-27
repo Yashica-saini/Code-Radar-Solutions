@@ -31,13 +31,14 @@ int quickSelect(int arr[], int low, int high, int k) {
         if (pi == k - 1)  
             return arr[pi];
 
-        if (k - 1 < pi) 
+        if (k - 1 < pi)  
             return quickSelect(arr, low, pi - 1, k);
 
         return quickSelect(arr, pi + 1, high, k);  
-    return -1; 
     }
+    return -1; 
 }
+
 
 int kthSmallest(int arr[], int n, int k) {
     return quickSelect(arr, 0, n - 1, k);
