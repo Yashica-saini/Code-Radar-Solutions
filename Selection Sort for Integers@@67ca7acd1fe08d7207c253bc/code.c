@@ -2,13 +2,13 @@
 
 void selectionSort(int arr[10], int n) {
     for (int i = 0; i < n - 1; i++) {
-        int minIndex = i;  // Assume the current index is the minimum
+        int minIndex = i;  
         for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[minIndex]) {  // Find the minimum element
+            if (arr[j] < arr[minIndex]) {  
                 minIndex = j;
             }
         }
-        // Swap the found minimum element with the first unsorted element
+        
         int temp = arr[i];
         arr[i] = arr[minIndex];
         arr[minIndex] = temp;
@@ -16,9 +16,9 @@ void selectionSort(int arr[10], int n) {
 }
 
 void printArray(int arr[10], int n) {
-    for (int i = 0; i < n; i++) {  // Print in ascending order
+    for (int i = 0; i < n; i++) {  
         printf("%d ", arr[i]);
     }
-    printf("\n");  // New line for better formatting
+    printf("\n");  
 }
 
