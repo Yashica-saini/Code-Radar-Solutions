@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 void findPairs(int arr[], int n, int target) {
     qsort(arr, n, sizeof(int), (int (*)(const void *, const void *))strcmp);
@@ -40,3 +39,4 @@ int main() {
 
     return 0;
 }
+
