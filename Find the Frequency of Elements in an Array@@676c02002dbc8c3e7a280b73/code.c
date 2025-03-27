@@ -12,7 +12,7 @@ void findFrequency(int arr[], int n) {
     // Print frequencies
     for (int i = 0; i < n; i++) {
         if (freq[arr[i]] != 0) {
-            printf("%d  %d\n", arr[i], freq[arr[i]]);
+            printf("%d %d\n", arr[i], freq[arr[i]]);
             freq[arr[i]] = 0; // Avoid duplicate printing
         }
     }
