@@ -16,10 +16,15 @@ void compressString(char *input, char *output) {
             i++;
         }
 
-        // Append count if greater than 1
+        // Append count only if greater than 1
         if (count > 1) {
             index += sprintf(output + index, "%d", count);
         }
     }
     output[index] = '\0'; // Null-terminate the compressed string
+
+    // If compressed string is not shorter, return original input
+    if (strlen(output) >= len) {
+        strcpy(output, input);
+    }
 }
