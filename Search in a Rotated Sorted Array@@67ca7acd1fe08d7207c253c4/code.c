@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Function to search in a rotated sorted array
-int searchRotatedArray(int arr[], int n, int target) {
+int searchInRotatedArray(int arr[], int n, int target) {
     int left = 0, right = n - 1;
     
     while (left <= right) {
