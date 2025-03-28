@@ -15,9 +15,9 @@ void findLeaders(int arr[], int n) {
     
     
     for (int i = index - 1; i >= 0; i--) {
-        printf("%d ", leaders[i]);
+        
     }
-    printf("\n");
+   
 }
 
 void findMaxFrequencyElement(int arr[], int n) {
@@ -34,7 +34,7 @@ void findMaxFrequencyElement(int arr[], int n) {
             maxElement = arr[i];
         }
     }
-    printf(" %d (Count: %d)\n", maxElement, maxCount);
+    printf("%d\n", maxElement, maxCount);
 }
 
 int main() {
