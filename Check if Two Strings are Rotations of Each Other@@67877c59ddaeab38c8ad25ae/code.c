@@ -1,22 +1,42 @@
-#include<stdio.h>
-#include<string.h>
-int main(){
-    char str[100],rev[100],str2[100];
-    scanf("%s",str);
+#include <stdio.h>
+#include <string.h>
+
+
+int areRotations(char str1[], char str2[]) {
+    
+    if (strlen(str1) != strlen(str2)) {
+        return 0;  
+    }
+
    
-    scanf("%s",str2);
-    int len=strlen(str);
-    int j=0;
-    for(int i=len-1;i>=0;i--){
-        rev[j]=str[i];
-        j++;
+    char temp[2 * strlen(str1) + 1];
+    strcpy(temp, str1);
+    strcat(temp, str1);
+
+    
+    if (strstr(temp, str2) != NULL) {
+        return 1;  
     }
-    rev[len]='\0';
-    if(strcmp(rev,str2)==0){
-        printf("Yes\n");
+
+    return 0; 
+}
+
+int main() {
+    char str1[100], str2[100];
+
+    
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, "\n")] = '\0';  
+
+    
+    fgets(str2, sizeof(str2), stdin);
+    str2[strcspn(str2, "\n")] = '\0';  
+
+    if (areRotations(str1, str2)) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
     }
-    else{
-        printf("No\n");
-    }
+
     return 0;
 }
