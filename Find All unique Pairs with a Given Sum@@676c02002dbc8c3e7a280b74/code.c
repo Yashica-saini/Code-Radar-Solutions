@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void findPairs(int arr[], int n, int targetSum) {
-    printf("Unique pairs with sum %d are:\n", targetSum);
+   
     
     for (int i = 0; i < n - 1; i++) {
         if (i > 0 && arr[i] == arr[i - 1]) continue;
