@@ -6,26 +6,24 @@ void findPairs(int arr[], int n, int targetSum) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (arr[i] + arr[j] == targetSum) {
-                // Check for duplicate pairs before printing
-                int isDuplicate = 0;
-                for (int k = 0; k < i; k++) {
-                    if ((arr[k] == arr[i] && arr[k + 1] == arr[j]) || (arr[k] == arr[j] && arr[k + 1] == arr[i])) {
-                        isDuplicate = 1;
-                        break;
-                    }
-                }
-                if (!isDuplicate) {
-                    printf("(%d, %d)\n", arr[i], arr[j]);
-                }
+                printf("%d %d\n", arr[i], arr[j]);
             }
         }
     }
 }
 
 int main() {
-    int arr[] = {1, 5, 7, -1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int targetSum = 6;
+    int n, targetSum;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter target sum: ");
+    scanf("%d", &targetSum);
     
     findPairs(arr, n, targetSum);
     return 0;
