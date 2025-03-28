@@ -16,7 +16,7 @@ int main() {
 
     // Display the result
     if (result != 0) {
-        printf("%d\n", num, result);
+        printf("%d\n", result);
     } else {
         printf("The number %d has no set bits.\n", num);
     }
