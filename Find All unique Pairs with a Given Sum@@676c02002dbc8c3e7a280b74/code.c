@@ -15,14 +15,14 @@ void findPairs(int arr[], int n, int targetSum) {
 int main() {
     int n, targetSum;
 
-    printf("Enter number of elements: ");
+   
     scanf("%d", &n);
     int arr[n];
-    printf("Enter the elements: ");
+    
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    printf("Enter target sum: ");
+   
     scanf("%d", &targetSum);
     
     findPairs(arr, n, targetSum);
