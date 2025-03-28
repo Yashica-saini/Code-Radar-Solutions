@@ -32,7 +32,7 @@ int main() {
 
     char result = findFirstNonRepeatedChar(str);
     if (result != '\0') {
-        printf("The first non-repeated character is: %c\n", result);
+        printf("%c\n", result);
     } else {
         printf("No non-repeated character found.\n");
     }
