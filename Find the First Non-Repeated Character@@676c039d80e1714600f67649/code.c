@@ -34,7 +34,7 @@ int main() {
     if (result != '\0') {
         printf("%c\n", result);
     } else {
-        printf("No non-repeated character found.\n");
+        printf("-\n");
     }
 
     return 0;
