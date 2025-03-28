@@ -27,8 +27,8 @@ int main() {
 
     // Display the result
     if (result != 0) {
-        printf("The lowest set bit of %d is: %d\n", num, result);
-        printf("The position of the lowest set bit is: %d\n", position);
+        printf("%d\n", num, result);
+        printf("%d\n", position-1);
     } else {
         printf("The number %d has no set bits.\n", num);
     }
