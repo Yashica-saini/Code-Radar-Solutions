@@ -1,28 +1,30 @@
 #include <stdio.h>
 
 void findLeaders(int arr[], int n) {
-    int max_right = arr[n - 1];
-    printf("%d ", max_right);
-
+    
+    int maxRight = arr[n - 1]; // Rightmost element is always a leader
+    printf("%d\n", maxRight);
+    
     for (int i = n - 2; i >= 0; i--) {
-        if (arr[i] > max_right) {
-            max_right = arr[i];
-            printf("%d ", max_right);
+        if (arr[i] > maxRight) {
+            maxRight = arr[i];
+            printf("%d\n", maxRight);
         }
     }
-    printf("\n");
 }
 
 int main() {
     int n;
+    
+    // Taking input
+    
     scanf("%d", &n);
     int arr[n];
-
+    
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
+    
     findLeaders(arr, n);
-
     return 0;
 }
