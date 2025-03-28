@@ -8,6 +8,10 @@ int compare(const void *a, const void *b) {
 
 
 void findMinDifferencePair(int arr[], int n) {
+    if (n < 2) {
+        printf("-1\n");
+        return;
+    }
     
     qsort(arr, n, sizeof(int), compare);
 
