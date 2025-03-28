@@ -1,48 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int compare(const void *a, const void *b) {
-    return (*(int *)a - *(int *)b);
-}
-
-void findPairs(int arr[], int n, int target) {
-    qsort(arr, n, sizeof(int), compare);
-
-    int left = 0, right = n - 1;
-
-    while (left < right) {
-        int sum = arr[left] + arr[right];
-
-        if (sum == target) {
-            printf("%d %d\n", arr[right], arr[left]);
-
-            while (left < right && arr[left] == arr[left + 1]) left++;
-            while (left < right && arr[right] == arr[right - 1]) right--;
-
-            left++;
-            right--;
-        } else if (sum < target) {
-            left++;
-        } else {
-            right--;
+void findPairs(int arr[], int n, int targetSum) {
+    printf("Unique pairs with sum %d are:\n", targetSum);
+    
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] + arr[j] == targetSum) {
+                // Check for duplicate pairs before printing
+                int isDuplicate = 0;
+                for (int k = 0; k < i; k++) {
+                    if ((arr[k] == arr[i] && arr[k + 1] == arr[j]) || (arr[k] == arr[j] && arr[k + 1] == arr[i])) {
+                        isDuplicate = 1;
+                        break;
+                    }
+                }
+                if (!isDuplicate) {
+                    printf("(%d, %d)\n", arr[i], arr[j]);
+                }
+            }
         }
     }
 }
 
 int main() {
-    int n, target;
-    scanf("%d", &n);
-    int arr[n];
-
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    scanf("%d", &target);
-    findPairs(arr, n, target);
-
+    int arr[] = {1, 5, 7, -1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int targetSum = 6;
+    
+    findPairs(arr, n, targetSum);
     return 0;
 }
-
-
-
