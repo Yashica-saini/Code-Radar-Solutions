@@ -39,7 +39,7 @@ void findLongestWord(char str[]) {
         strcpy(longestWord, currentWord);
     }
 
-    printf(" %s\n", longestWord);
+    printf("%s\n", longestWord);
 }
 
 int main() {
