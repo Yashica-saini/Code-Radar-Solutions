@@ -1,33 +1,41 @@
 #include <stdio.h>
 #include <string.h>
-int main(){
-    char str[100];
-    scanf("%[^\n]",str);
-    int len=strlen(str);
-    char rev[100];
-    char cleanstr;
-    int j=0;
-    int m=0;
-    for(int i=0;i<len;i++){
-        if(str[i]!=' '){
-            cleanstr[j]=str[i];
-            j++;
+#include <ctype.h>
+
+int isPalindrome(char str[]) {
+    int start = 0;
+    int end = strlen(str) - 1;
+
+    // Compare characters from the beginning and end
+    while (start < end) {
+        // Skip spaces and non-alphabetic characters
+        if (str[start] == ' ') {
+            start++;
+        } else if (str[end] == ' ') {
+            end--;
+        }
+        // Compare the characters (ignore case)
+        else if (tolower(str[start]) != tolower(str[end])) {
+            return 0;  // Not a palindrome
+        } else {
+            start++;
+            end--;
         }
     }
-    int j=0;
+    return 1;  // It's a palindrome
+}
 
-    for(int i=len-1;i>=0;i--){
-        if(str[i]==' ')continue;
-        rev[j]=str[i];
-        j++;
-    }
-    rev[j]='\0';
+int main() {
+    char str[1000];
+
    
-    if(strcmp(cleanstr,rev)==0){
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';  
+    if (isPalindrome(str)) {
         printf("Yes\n");
+    } else {
+        printf("No\n");
     }
-    else{
-        printf("No");
-    }
-    
+
+    return 0;
 }
