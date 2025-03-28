@@ -27,13 +27,13 @@ void findShortestWord(char str[]) {
         }
     }
 
+
     printf("%s\n", shortestWord);
 }
 
 int main() {
     char str[1000];
 
-    
    
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';  
