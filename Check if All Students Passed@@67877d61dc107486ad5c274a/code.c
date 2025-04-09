@@ -31,7 +31,7 @@ int main() {
     // Output
  
     if (allPassed) {
-        printf(" All students passed.\n");
+        printf(" All Passed.\n");
     } else {
         printf(" Not all students passed.\n");
         printf("List of students who failed:\n");
