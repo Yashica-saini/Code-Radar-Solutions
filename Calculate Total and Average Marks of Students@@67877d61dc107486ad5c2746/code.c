@@ -19,7 +19,7 @@ int main() {
     }
 
     float average = total / n;
-    printf("%.2f %.2f", total, average);
+    printf("Total Marks: %.2f\nAverage Marks: %.2f", total, average);
 
     return 0;
 }
