@@ -24,13 +24,13 @@ void reverseWordsInString(char str[]) {
         i++;
     }
 
-    printf("Reversed words: %s\n", str);
+    printf("%s\n", str);
 }
 
 int main() {
     char str[1000];
 
-    printf("Enter a string: ");
+   
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0'; // Remove newline character
 
