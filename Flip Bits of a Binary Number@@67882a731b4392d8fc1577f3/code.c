@@ -1,22 +1,17 @@
 #include <stdio.h>
-#include <string.h>
 
-void flipBits(char binary[]) {
-    for (int i = 0; binary[i] != '\0'; i++) {
-        if (binary[i] == '0')
-            binary[i] = '1';
-        else if (binary[i] == '1')
-            binary[i] = '0';
-    }
+int flipBits(int num) {
+    return ~num;
 }
 
 int main() {
-    char binary[100];
-    
-    scanf("%s", binary);
+    int num;
+  
+    scanf("%d", &num);
 
-    flipBits(binary);
+    int flipped = flipBits(num);
+    printf("%d\n", flipped);
 
-    printf(" %s\n", binary);
     return 0;
 }
+
