@@ -18,6 +18,6 @@ int main() {
     }
 
     rev[j] = '\0'; // Null-terminate the string
-    printf("%s", rev);
+    printf("%s ", rev);
     return 0;
 }
