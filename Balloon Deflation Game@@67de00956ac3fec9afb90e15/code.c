@@ -3,8 +3,9 @@
 void deflateBalloons(int air[], int n) {
     int remaining = n;
 
-    while (remaining > 0) {
+    while (1) {
         int min = 1000000000;
+        int count = 0;
 
         // Find the minimum non-zero air level
         for (int i = 0; i < n; i++) {
@@ -13,8 +14,12 @@ void deflateBalloons(int air[], int n) {
             }
         }
 
-        // Deflate balloons and count how many got deflated this round
-        int count = 0;
+        // If all balloons are deflated, stop
+        if (min == 1000000000) {
+            break;
+        }
+
+        // Deflate and count how many were affected
         for (int i = 0; i < n; i++) {
             if (air[i] > 0) {
                 air[i] -= min;
@@ -22,11 +27,7 @@ void deflateBalloons(int air[], int n) {
             }
         }
 
-        // Print number of balloons deflated this round
-        if (count > 0) {
-            printf("%d\n", count);
-        }
-
-        remaining -= count;
+        // Print number of balloons deflated in this round
+        printf("%d\n", count);
     }
 }
