@@ -1,23 +1,25 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main() {
     char str[100], rev[100];
-    scanf("%[^\n]", str);
+    scanf("%[^\n]", str);  // Read input with spaces
 
     int j = 0;
     int len = strlen(str);
 
     for (int i = 0; i < len; i++) {
         char ch = str[i];
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-            rev[j] = ch;
+        ch = tolower(ch);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || !isalpha(ch)) {
+            rev[j] = str[i];  // Keep original case and spacing
             j++;
         }
     }
 
-    rev[j] = '\0'; // Null-terminate the string
-    printf("%s ", rev);
+    rev[j] = '\0';  // Null-terminate the string
+    printf("%s\n", rev);
     return 0;
 }
+
