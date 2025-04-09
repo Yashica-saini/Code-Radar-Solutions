@@ -32,4 +32,11 @@ int main() {
     str[strcspn(str, "\n")] = '\0'; // Remove trailing newline
 
     // Process
-    reverseWordsIn}
+    reverseWordsInString(str);
+
+    // Output
+    printf("%s\n", str);
+
+    return 0;
+}
+
