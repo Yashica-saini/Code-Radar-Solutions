@@ -25,7 +25,7 @@ void deflateBalloons(int air[], int n) {
 
         // Deflate balloons having air by minimum value
         for (int i = 0; i < n; i++) {
-            if (air[i] > 0) {
+            if (air[i] >= 0) {
                 air[i] -= min;
             }
         }
