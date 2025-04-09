@@ -31,9 +31,9 @@ int main() {
     // Output
  
     if (allPassed) {
-        printf("✅ All students passed.\n");
+        printf(" All students passed.\n");
     } else {
-        printf("❌ Not all students passed.\n");
+        printf(" Not all students passed.\n");
         printf("List of students who failed:\n");
         for (int i = 0; i < n; i++) {
             if (s[i].marks < 33) {
