@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Function to find the most played game
-int mostPlayedGame(int n, int arr[]) {
+int mostPlayedGame(int arr[],int n ) {
     int freq[101] = {0}; // Assuming Game IDs are between 1 to 100
 
     // Count frequency of each game
