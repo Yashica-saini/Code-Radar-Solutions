@@ -37,7 +37,7 @@ int main() {
     }
 
     // Display sorted list
-    printf("\n--- Students Sorted by Marks (High to Low) ---\n");
+  
     for (int i = 0; i < n; i++) {
         printf("Roll: %d, Name: %s, Marks: %.2f\n", s[i].roll, s[i].name, s[i].marks);
     }
