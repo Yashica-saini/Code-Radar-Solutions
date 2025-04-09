@@ -1,22 +1,32 @@
 #include <stdio.h>
 
-void deflateBalloons(int balloons[], int n, int result[]) {
-    int score = 0;
+void deflateBalloons(int air[], int n) {
+    int remaining = n;
 
-    // Mark balloons as "popped" by setting to -1
-    for (int i = 0; i < n; i++) {
-        // Find the largest unpopped balloon
-        int maxIdx = -1;
-        for (int j = 0; j < n; j++) {
-            if (balloons[j] != -1 && (maxIdx == -1 || balloons[j] > balloons[maxIdx])) {
-                maxIdx = j;
+    while (remaining > 0) {
+        int min = 1000000000;
+
+        // Find the minimum non-zero air level
+        for (int i = 0; i < n; i++) {
+            if (air[i] > 0 && air[i] < min) {
+                min = air[i];
             }
         }
 
-        if (maxIdx != -1) {
-            score += balloons[maxIdx];
-            result[i] = score;
-            balloons[maxIdx] = -1; // pop the balloon
+        // Deflate balloons and count how many got deflated this round
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (air[i] > 0) {
+                air[i] -= min;
+                count++;
+            }
         }
+
+        // Print number of balloons deflated this round
+        if (count > 0) {
+            printf("%d\n", count);
+        }
+
+        remaining -= count;
     }
 }
