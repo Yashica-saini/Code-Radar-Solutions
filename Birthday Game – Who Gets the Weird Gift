@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+// Function to find who gets the prank gift
+int findPrankReceiver(int n, int m, int s) {
+    int position = (s + m - 1) % n;  // Wrap around using modulo
+    if (position == 0)
+        position = n;  // If remainder is 0, last friend gets it
+    return position;
+}
