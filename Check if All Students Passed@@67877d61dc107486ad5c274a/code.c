@@ -7,33 +7,25 @@ struct Student {
 };
 
 int main() {
-    int n, allPassed = 1; // Flag to track if all students passed
-    
+    int n, allPassed = 1;
     scanf("%d", &n);
 
     struct Student s[n];
 
-    // Input student data
     for (int i = 0; i < n; i++) {
-        
-     
         scanf("%d", &s[i].roll);
- 
         scanf("%s", s[i].name);
-
         scanf("%f", &s[i].marks);
 
         if (s[i].marks < 33) {
-            allPassed = 0; 
+            allPassed = 0;
         }
     }
 
-    // Output
- 
     if (allPassed) {
         printf("All Passed\n");
     } else {
-        printf(" Not all passed.\n");
+        printf("Not all passed.\n");
         printf("List of students who failed:\n");
         for (int i = 0; i < n; i++) {
             if (s[i].marks < 33) {
