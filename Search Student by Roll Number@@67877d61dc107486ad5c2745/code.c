@@ -32,9 +32,9 @@ int main() {
     for (int i = 0; i < n; i++) {
         if (students[i].roll == searchRoll) {
             
-            printf("Roll Number: %d\n", students[i].roll);
-            printf("Name: %s\n", students[i].name);
-            printf("Marks: %.2f\n", students[i].marks);
+            printf("Roll Number: %d,", students[i].roll);
+            printf("Name: %s,", students[i].name);
+            printf("Marks: %.2f", students[i].marks);
             found = 1;
             break;
         }
