@@ -31,18 +31,18 @@ bool isAnagram(char str1[], char str2[]) {
 int main() {
     char str1[MAX], str2[MAX];
 
-    printf("Enter the first string: ");
+ 
     fgets(str1, MAX, stdin);
     str1[strcspn(str1, "\n")] = '\0';
 
-    printf("Enter the second string: ");
+
     fgets(str2, MAX, stdin);
     str2[strcspn(str2, "\n")] = '\0';
 
     if (isAnagram(str1, str2)) {
-        printf("The strings are anagrams.\n");
+        printf("YES\n");
     } else {
-        printf("The strings are NOT anagrams.\n");
+        printf("NO.\n");
     }
 
     return 0;
