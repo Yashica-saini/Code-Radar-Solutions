@@ -5,16 +5,11 @@ int setNthBit(int num, int n) {
 }
 
 int main() {
-    int number, n;
-    
+    int num, n;
+    scanf("%d %d", &num, &n);
 
-    scanf("%d", &number);
-    
-
-    scanf("%d", &n);
-
-    int result = setNthBit(number, n);
-    printf("%d\n", n, result);
+    int result = setNthBit(num, n);
+    printf("%d\n", result);
 
     return 0;
 }
