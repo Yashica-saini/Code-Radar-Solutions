@@ -2,8 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-
-void reverseString(char str[], int start, int end) {
+void reverseWord(char str[], int start, int end) {
     while (start < end) {
         char temp = str[start];
         str[start] = str[end];
@@ -13,32 +12,29 @@ void reverseString(char str[], int start, int end) {
     }
 }
 
-void reverseWords(char str[]) {
+void reverseWordsInString(char str[]) {
+    int i = 0, start = 0;
     int n = strlen(str);
-    
-    
-    reverseString(str, 0, n - 1);
-    
-    
-    int start = 0;
-    for (int i = 0; i <= n; i++) {
+
+    while (i <= n) {
         if (str[i] == ' ' || str[i] == '\0') {
-            reverseString(str, start, i - 1);
+            reverseWord(str, start, i - 1);
             start = i + 1;
         }
+        i++;
     }
+
+    printf("Reversed words: %s\n", str);
 }
 
 int main() {
     char str[1000];
-    
-    
+
+    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';  
-    
-    reverseWords(str);
-    
-    printf("%s\n", str);
-    
+    str[strcspn(str, "\n")] = '\0'; // Remove newline character
+
+    reverseWordsInString(str);
+
     return 0;
 }
