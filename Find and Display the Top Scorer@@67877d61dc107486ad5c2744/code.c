@@ -17,7 +17,7 @@ void findTopScorer(struct Student students[], int n) {
     }
 
     // Output in the required format
-    printf("Roll Number: %d, Name: %s, Marks: %.2f\n", topScorer.roll, topScorer.name, topScorer.score);
+    printf("Top Scorer: Roll Number: %d, Name: %s, Marks: %.2f\n", topScorer.roll, topScorer.name, topScorer.score);
 }
 
 int main() {
