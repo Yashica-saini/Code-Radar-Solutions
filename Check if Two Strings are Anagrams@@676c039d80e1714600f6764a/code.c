@@ -40,9 +40,9 @@ int main() {
     str2[strcspn(str2, "\n")] = '\0';
 
     if (isAnagram(str1, str2)) {
-        printf("YES\n");
+        printf("Yes\n");
     } else {
-        printf("NO\n");
+        printf("No\n");
     }
 
     return 0;
