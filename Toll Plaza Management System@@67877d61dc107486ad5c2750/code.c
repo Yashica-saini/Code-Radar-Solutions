@@ -30,4 +30,4 @@ int main(){
     }
     printf("Cars: %.2f, Trucks: %.2f, Bikes: %.2f",car_toll,truck_toll,bike_toll);
 
-}.
+}
