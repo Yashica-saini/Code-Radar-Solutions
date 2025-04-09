@@ -31,7 +31,7 @@ int main() {
     average = sum / n;
 
     // Display average
-    printf("Average Marks = %.2f\n", average);
+    printf("Average Marks: %.2f\n", average);
 
     return 0;
 }
