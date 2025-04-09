@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 void reverseWord(char str[], int start, int end) {
     while (start < end) {
@@ -23,18 +22,14 @@ void reverseWordsInString(char str[]) {
         }
         i++;
     }
-
-    printf("%s\n", str);
 }
 
 int main() {
     char str[1000];
 
-   
+    // Reading input
     fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0'; // Remove newline character
+    str[strcspn(str, "\n")] = '\0'; // Remove trailing newline
 
-    reverseWordsInString(str);
-
-    return 0;
-}
+    // Process
+    reverseWordsIn
