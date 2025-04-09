@@ -15,33 +15,28 @@ int main() {
     int choice, count = 0;
 
     while (1) {
-        printf("\nLibrary Menu:\n");
-        printf("1. Add Book\n");
-        printf("2. Display All Books\n");
-        printf("3. Search Book by ID\n");
-        printf("4. Exit\n");
-        printf("Enter your choice: ");
+       
         scanf("%d", &choice);
 
         if (choice == 1) {
             if (count < MAX_BOOKS) {
-                printf("Enter Book ID: ");
+                
                 scanf("%d", &library[count].id);
                 getchar();  // to clear newline
 
-                printf("Enter Title: ");
+                
                 fgets(library[count].title, 100, stdin);
                 library[count].title[strcspn(library[count].title, "\n")] = '\0'; // remove newline
 
-                printf("Enter Author: ");
+                
                 fgets(library[count].author, 100, stdin);
                 library[count].author[strcspn(library[count].author, "\n")] = '\0';
 
-                printf("Enter Price: ");
+               
                 scanf("%f", &library[count].price);
 
                 count++;
-                printf("Book added successfully!\n");
+                
             } else {
                 printf("Library is full!\n");
             }
