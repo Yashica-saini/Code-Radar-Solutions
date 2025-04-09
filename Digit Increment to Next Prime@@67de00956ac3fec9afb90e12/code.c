@@ -9,6 +9,9 @@ int nextPrimeDigit(int digit) {
 }
 
 int incrementToPrimeDigits(int N) {
+    if (N == 0)
+        return 2;  // Special case for input 0
+
     int result = 0, place = 1;
 
     while (N > 0) {
