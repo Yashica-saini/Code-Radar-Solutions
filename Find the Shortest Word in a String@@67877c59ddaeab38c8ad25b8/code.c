@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 
 void findShortestWord(char str[]) {
     int n = strlen(str);
@@ -8,38 +9,36 @@ void findShortestWord(char str[]) {
         return;
     }
 
-    int minLength = n;    // Initially, assume the shortest word is the whole string
-    char shortestWord[n + 1];
-    int currentLength = 0;
-    int wordStart = 0;
+    int minLength = INT_MAX;
+    int startIndex = 0;
+    int i = 0;
 
-    for (int i = 0; i <= n; i++) {
-        if (str[i] == ' ' || str[i] == '\0') {  // End of a word
-            if (currentLength < minLength) {
-                minLength = currentLength;
-                strncpy(shortestWord, &str[wordStart], currentLength);
-                shortestWord[currentLength] = '\0';  // Null-terminate the shortest word
-            }
-            currentLength = 0;
-            wordStart = i + 1;  // Start of next word
-        } else {
-            currentLength++;
+    while (i <= n) {
+        int j = i;
+        while (j < n && str[j] != ' ') {
+            j++;
         }
+
+        int wordLength = j - i;
+        if (wordLength > 0 && wordLength < minLength) {
+            minLength = wordLength;
+            startIndex = i;
+        }
+
+        i = j + 1;
     }
 
-    // Output the shortest word found
-    printf("%s", shortestWord);
+    // Print the shortest word
+    for (int k = 0; k < minLength; k++) {
+        printf("%c", str[startIndex + k]);
+    }
+    printf("\n");
 }
 
 int main() {
-    char str[1000];
-
-    // Taking input
-    
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';  // Remove trailing newline if any
-
-    findShortestWord(str);
-
+    char input[1000];
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0'; // Remove newline character if present
+    findShortestWord(input);
     return 0;
 }
