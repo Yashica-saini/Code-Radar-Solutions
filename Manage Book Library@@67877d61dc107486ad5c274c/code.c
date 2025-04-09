@@ -12,77 +12,27 @@ struct Book {
 
 int main() {
     struct Book library[MAX_BOOKS];
-    int choice, count = 0;
+    int n;
 
-    while (1) {
-       
-        scanf("%d", &choice);
+    // Input: number of books
+    scanf("%d", &n);
 
-        if (choice == 1) {
-            if (count < MAX_BOOKS) {
-                
-                scanf("%d", &library[count].id);
-                getchar();  // to clear newline
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &library[i].id);
+        getchar();  // to consume newline after integer
+        fgets(library[i].title, sizeof(library[i].title), stdin);
+        library[i].title[strcspn(library[i].title, "\n")] = '\0';
 
-                
-                fgets(library[count].title, 100, stdin);
-                library[count].title[strcspn(library[count].title, "\n")] = '\0'; // remove newline
+        fgets(library[i].author, sizeof(library[i].author), stdin);
+        library[i].author[strcspn(library[i].author, "\n")] = '\0';
 
-                
-                fgets(library[count].author, 100, stdin);
-                library[count].author[strcspn(library[count].author, "\n")] = '\0';
+        scanf("%f", &library[i].price);
+    }
 
-               
-                scanf("%f", &library[count].price);
-
-                count++;
-                
-            } else {
-                printf("Library is full!\n");
-            }
-        }
-
-        else if (choice == 2) {
-            printf("\n--- Book List ---\n");
-            for (int i = 0; i < count; i++) {
-                printf("ID: %d\n", library[i].id);
-                printf("Title: %s\n", library[i].title);
-                printf("Author: %s\n", library[i].author);
-                printf("Price: ₹%.2f\n", library[i].price);
-                printf("-----------------\n");
-            }
-        }
-
-        else if (choice == 3) {
-            int searchId;
-            int found = 0;
-            printf("Enter Book ID to search: ");
-            scanf("%d", &searchId);
-
-            for (int i = 0; i < count; i++) {
-                if (library[i].id == searchId) {
-                    printf("Book found:\n");
-                    printf("Title: %s\n", library[i].title);
-                    printf("Author: %s\n", library[i].author);
-                    printf("Price: ₹%.2f\n", library[i].price);
-                    found = 1;
-                    break;
-                }
-            }
-
-            if (!found) {
-                printf("Book with ID %d not found.\n", searchId);
-            }
-        }
-
-        else if (choice == 4) {
-            printf("Exiting Library System. Goodbye!\n");
-            break;
-        }
-
-        else {
-            printf("Invalid choice. Try again.\n");
-        }
+    // Output
+    for (int i = 0; i < n; i++) {
+        printf("Book %d: %s by %s, Price = %.2f\n",
+               library[i].id, library[i].title, library[i].author, library[i].price);
     }
 
     return 0;
