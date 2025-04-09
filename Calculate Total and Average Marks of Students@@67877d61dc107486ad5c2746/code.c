@@ -3,33 +3,23 @@
 struct Student {
     int roll;
     char name[100];
-    float marks[5];  // Assuming 5 subjects
+    float marks;
 };
 
 int main() {
-    struct Student s;
-    float total = 0, average;
+    int n;
+    scanf("%d", &n);
 
-    printf("Enter roll number: ");
-    scanf("%d", &s.roll);
+    struct Student s[n];
+    float total = 0.0;
 
-    printf("Enter name: ");
-    scanf("%s", s.name);
-
-    printf("Enter marks for 5 subjects:\n");
-    for (int i = 0; i < 5; i++) {
-        printf("Subject %d: ", i + 1);
-        scanf("%f", &s.marks[i]);
-        total += s.marks[i];
+    for(int i = 0; i < n; i++) {
+        scanf("%d %s %f", &s[i].roll, s[i].name, &s[i].marks);
+        total += s[i].marks;
     }
 
-    average = total / 5;
-
-    printf("\n--- Student Details ---\n");
-    printf("Roll Number: %d\n", s.roll);
-    printf("Name: %s\n", s.name);
-    printf("Total Marks: %.2f\n", total);
-    printf("Average Marks: %.2f\n", average);
+    float average = total / n;
+    printf("%.2f %.2f", total, average);
 
     return 0;
 }
