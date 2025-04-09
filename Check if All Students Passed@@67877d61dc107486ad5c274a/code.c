@@ -25,7 +25,7 @@ int main() {
     if (allPassed) {
         printf("All Passed\n");
     } else {
-        printf("Not All passed\n");
+        printf("Not All Passed\n");
        
         
     }
