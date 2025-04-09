@@ -41,7 +41,7 @@ int main() {
     }
 
     if (!found) {
-        printf("\nStudent with roll number %d not found.\n", searchRoll);
+        printf("Student not found\n", searchRoll);
     }
 
     return 0;
