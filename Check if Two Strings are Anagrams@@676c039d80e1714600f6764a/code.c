@@ -42,7 +42,7 @@ int main() {
     if (isAnagram(str1, str2)) {
         printf("YES\n");
     } else {
-        printf("NO.\n");
+        printf("NO\n");
     }
 
     return 0;
