@@ -19,7 +19,7 @@ int main() {
 
         printf("DEBUG: %s scored %.2f\n", s[i].name, s[i].marks); // Debug line
 
-        if (s[i].marks < 33) {
+        if (s[i].marks < 50) {
             allPassed = 0;
         }
     }
