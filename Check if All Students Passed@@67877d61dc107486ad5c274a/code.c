@@ -17,8 +17,6 @@ int main() {
         scanf("%s", s[i].name);
         scanf("%f", &s[i].marks);
 
-        printf("DEBUG: %s scored %.2f\n", s[i].name, s[i].marks); // Debug line
-
         if (s[i].marks < 50) {
             allPassed = 0;
         }
@@ -27,13 +25,9 @@ int main() {
     if (allPassed) {
         printf("All Passed\n");
     } else {
-        printf("Not all passed.\n");
-        printf("List of students who failed:\n");
-        for (int i = 0; i < n; i++) {
-            if (s[i].marks < 33) {
-                printf("Roll: %d, Name: %s, Marks: %.2f\n", s[i].roll, s[i].name, s[i].marks);
-            }
-        }
+        printf("Not all passed\n");
+       
+        
     }
 
     return 0;
