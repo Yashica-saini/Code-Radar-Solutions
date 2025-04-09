@@ -10,7 +10,7 @@ int main() {
     int n;
     float sum = 0, average;
 
-    printf("Enter the number of students: ");
+
     scanf("%d", &n);
 
     struct Student students[n];
@@ -31,7 +31,7 @@ int main() {
     average = sum / n;
 
     // Display average
-    printf("\nAverage Marks%d = %.2f\n", n, average);
+    printf("\nAverage Marks = %.2f\n", average);
 
     return 0;
 }
