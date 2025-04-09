@@ -2,10 +2,10 @@
 
 void deflateBalloons(int air[], int n) {
     while (1) {
-        int min = 1000000000;
         int count = 0;
+        int min = 1000000; // Take a large value for comparison
 
-        // Count how many balloons still have air and find min > 0
+        // Count balloons with air and find minimum air
         for (int i = 0; i < n; i++) {
             if (air[i] > 0) {
                 count++;
@@ -16,13 +16,14 @@ void deflateBalloons(int air[], int n) {
         }
 
         // If all are deflated, stop
-        if (count == 0)
+        if (count == 0) {
             break;
+        }
 
-        // Print count before this round
-        printf("%d\n", n);  // print total number of balloons, as you requested
+        // Print count of balloons with air
+        printf("%d\n", count);
 
-        // Deflate the balloons that have air
+        // Deflate balloons having air by minimum value
         for (int i = 0; i < n; i++) {
             if (air[i] > 0) {
                 air[i] -= min;
@@ -30,4 +31,3 @@ void deflateBalloons(int air[], int n) {
         }
     }
 }
-
