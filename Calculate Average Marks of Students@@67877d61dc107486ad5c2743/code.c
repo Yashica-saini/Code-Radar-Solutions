@@ -17,12 +17,11 @@ int main() {
 
     // Input student data
     for (int i = 0; i < n; i++) {
-        printf("\nEnter details for student %d:\n", i + 1);
-        printf("Roll Number: ");
+      
         scanf("%d", &students[i].roll);
-        printf("Name: ");
+
         scanf("%s", students[i].name);
-        printf("Marks: ");
+      
         scanf("%f", &students[i].marks);
 
         sum += students[i].marks;
@@ -32,7 +31,7 @@ int main() {
     average = sum / n;
 
     // Display average
-    printf("\nAverage Marks of %d Students = %.2f\n", n, average);
+    printf("\nAverage Marks%d = %.2f\n", n, average);
 
     return 0;
 }
