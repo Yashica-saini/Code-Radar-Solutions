@@ -7,7 +7,7 @@ int calculatePenalty(int subDay, int subMonth, int subYear, int dueDay, int dueM
             return 500 * (subMonth - dueMonth);
         }
         else if (subMonth == dueMonth && subDay > dueDay) {
-            return 15 * (subDay - dueDay);
+            return 10 * (subDay - dueDay);  // 10 per day late
         }
     }
     return 0; // No penalty
