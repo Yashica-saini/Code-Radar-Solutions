@@ -6,23 +6,22 @@ struct Rectangle {
 };
 
 int main() {
-    struct Rectangle r;
-    float area, perimeter;
+    int n;
+    scanf("%d", &n);
 
-    // Input
- 
-    scanf("%f", &r.length);
+    struct Rectangle r[n];
 
-    
-    scanf("%f", &r.breadth);
+    for (int i = 0; i < n; i++) {
+        scanf("%f %f", &r[i].length, &r[i].breadth);
+    }
 
-    // Calculations
-    area = r.length * r.breadth;
-    perimeter = 2 * (r.length + r.breadth);
+    for (int i = 0; i < n; i++) {
+        float area = r[i].length * r[i].breadth;
+        float perimeter = 2 * (r[i].length + r[i].breadth);
 
-    // Output
-    printf("Area = %.2f\n", area);
-    printf("Perimeter = %.2f\n", perimeter);
+        printf("Rectangle %d: Area = %.2f, Perimeter = %.2f\n", i + 1, area, perimeter);
+    }
 
     return 0;
 }
+
